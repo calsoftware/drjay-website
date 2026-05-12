@@ -1,37 +1,37 @@
 const reports = [
   {
-    title: "AI Transformation Readiness",
-    description: "Assessment frameworks for organisational AI integration, capability maturity models, and strategic implementation pathways.",
-    category: "AI Strategy",
+    title: "Systems Transformation Readiness",
+    description: "Assessment frameworks for organisational systems integration, capability maturity models, and strategic implementation pathways.",
+    category: "Systems Strategy",
     status: "Available",
   },
   {
-    title: "Cyber Resilience in Education",
-    description: "Analysis of security posture across learning institutions, threat landscape assessment, and resilience architecture design.",
-    category: "Cyber Security",
+    title: "Organisational Resilience Architecture",
+    description: "Analysis of resilience posture across organisations, threat landscape assessment, and adaptive systems design.",
+    category: "Resilience Systems",
     status: "Available",
   },
   {
-    title: "Learning Systems Architecture",
-    description: "Evidence-based analysis of educational technology ecosystems, pedagogical alignment, and scalable system design.",
-    category: "Learning Science",
+    title: "Capability Ecosystem Design",
+    description: "Evidence-based analysis of workforce capability systems, organisational alignment, and scalable ecosystem design.",
+    category: "Capability Science",
     status: "Available",
   },
   {
     title: "Digital Transformation Strategy",
-    description: "Organisational capability assessment, digital maturity evaluation, and strategic roadmaps for institutional change.",
+    description: "Organisational capability assessment, digital maturity evaluation, and strategic roadmaps for systemic change.",
     category: "Digital Strategy",
     status: "Available",
   },
   {
-    title: "Executive Intelligence Reports",
-    description: "Research-backed analysis on emerging technologies, competitive landscape evaluation, and strategic foresight.",
+    title: "Strategic Intelligence Reports",
+    description: "Research-backed analysis on emerging systems, competitive landscape evaluation, and strategic foresight.",
     category: "Strategic Intelligence",
     status: "Custom",
   },
   {
-    title: "Institutional Partnership Models",
-    description: "Frameworks for collaborative research, capability development programmes, and transformative institutional partnerships.",
+    title: "Transformation Partnership Models",
+    description: "Frameworks for collaborative systems work, capability development programmes, and transformative organisational partnerships.",
     category: "Partnership Strategy",
     status: "Custom",
   },
@@ -78,6 +78,15 @@ export default function StrategicReports() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href="/strategic-reports"
+            className="inline-flex items-center rounded-full border border-cyan-400/30 bg-slate-900/80 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-300 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+          >
+            Explore the full strategic archive
+          </a>
         </div>
       </div>
     </section>

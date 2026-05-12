@@ -1,65 +1,52 @@
-const services = [
-  {
-    title: "AI Strategy & Digital Transformation",
-    description: "Practical pathways for organisations to design AI-enabled systems, curriculum, and digital learning operations.",
-    icon: "🤖",
-  },
-  {
-    title: "Cyber Security Education",
-    description: "Security-aware digital practice, apprenticeship readiness and resilient technology learning frameworks.",
-    icon: "🔒",
-  },
-  {
-    title: "Learning Science & Assessment",
-    description: "Evidence-informed curriculum, IQA practice, feedback ecosystems and cognitive load-aware design.",
-    icon: "🧠",
-  },
-  {
-    title: "Software Engineering Leadership",
-    description: "Technical architecture, code quality assurance, and scalable development practices for education technology.",
-    icon: "💻",
-  },
-  {
-    title: "Data Science & Analytics",
-    description: "Learning analytics, performance insights, and data-driven decision making for educational outcomes.",
-    icon: "📊",
-  },
-  {
-    title: "Digital Curriculum Development",
-    description: "Modern learning content creation, interactive modules, and technology-enhanced pedagogy design.",
-    icon: "📚",
-  },
-];
+import Link from "next/link";
+import { projectDomains } from "../data/projects";
 
 export default function Services() {
   return (
-    <section id="services" className="px-6 py-24 sm:px-10 lg:px-12 lg:py-32">
+    <section id="projects" className="px-6 pt-10 pb-16 sm:px-10 lg:px-12 lg:pt-12 lg:pb-20">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 max-w-3xl animate-fade-in-up">
-          <p className="text-sm uppercase tracking-[0.4em] text-cyan-300/90 font-medium">Professional services</p>
-          <h3 className="mt-6 text-4xl font-bold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
-            Consulting, curriculum design and digital systems leadership.
-          </h3>
-          <p className="mt-6 text-lg leading-8 text-slate-400 sm:text-xl">
-            Support for teams, institutions and organisations navigating AI, learning science and secure digital transformation.
-          </p>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {projectDomains.map((domain, index) => (
             <div
-              key={service.title}
-              className="glass-hover rounded-3xl p-6 sm:p-8 shadow-premium animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              key={domain.slug}
+              className="rounded-2xl border border-slate-800/50 bg-slate-900/30 p-6 lg:p-7 flex flex-col animate-fade-in-up transition-colors duration-200 hover:border-slate-700/60"
+              style={{ animationDelay: `${index * 0.04}s` }}
             >
-              <div className="text-3xl mb-4">{service.icon}</div>
-              <h4 className="text-xl font-semibold text-slate-100 mb-4">{service.title}</h4>
-              <p className="text-slate-400 leading-relaxed">{service.description}</p>
-              <div className="mt-6 flex items-center text-cyan-400 text-sm font-medium">
-                <span>Learn more</span>
-                <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              {/* Icon */}
+              <div className="mb-5 inline-flex items-center justify-center w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-400/15 flex-shrink-0">
+                <svg
+                  className="w-5 h-5 text-cyan-400/80"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d={domain.iconPath} />
                 </svg>
+              </div>
+
+              {/* Title */}
+              <h3 className="text-base font-semibold text-slate-100 leading-snug mb-3">
+                {domain.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-sm text-slate-400 leading-6 flex-1">
+                {domain.summary}
+              </p>
+
+              {/* CTA */}
+              <div className="mt-5 pt-4 border-t border-slate-800/40">
+                <Link
+                  href={`/projects/${domain.slug}`}
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] font-medium text-cyan-400/60 hover:text-cyan-300/80 transition-colors duration-200"
+                >
+                  View selected work
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
               </div>
             </div>
           ))}

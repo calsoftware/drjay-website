@@ -1,20 +1,20 @@
 const projects = [
   {
-    title: "AI Transformation in Higher Education",
-    summary: "Strategic and technical implementation supporting institutional AI adoption, curriculum integration and capability development.",
-    tech: ["AI Strategy", "Capability Building", "Institutional Change"],
+    title: "Systems Transformation Architecture",
+    summary: "Strategic and technical implementation supporting organisational systems integration, capability ecosystems and transformation infrastructure.",
+    tech: ["Systems Architecture", "Capability Innovation", "Transformation Strategy"],
     status: "Completed",
   },
   {
-    title: "Cyber Resilience in Learning Systems",
-    summary: "Framework design and implementation for secure, resilient learning environments in apprenticeship and higher education contexts.",
-    tech: ["Cyber Security", "Learning Systems", "Risk Management"],
+    title: "Organisational Resilience Frameworks",
+    summary: "Framework design and implementation for resilient organisational systems across workforce and capability environments.",
+    tech: ["Resilience Systems", "Organisational Intelligence", "Risk Management"],
     status: "Ongoing",
   },
   {
-    title: "Digital Transformation Leadership",
-    summary: "Institutional strategy and capability development supporting leadership teams through organisational digital transformation.",
-    tech: ["Strategic Advisory", "Change Management", "Leadership"],
+    title: "Digital Capability Ecosystems",
+    summary: "Strategic systems design and capability development supporting leadership teams through digital transformation and organisational change.",
+    tech: ["Digital Strategy", "Change Leadership", "Capability Ecosystems"],
     status: "Active",
   },
 ];
@@ -24,12 +24,12 @@ export default function FeaturedWork() {
     <section id="projects" className="px-6 py-24 sm:px-10 lg:px-12 lg:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-3xl animate-fade-in-up">
-          <p className="text-sm uppercase tracking-[0.4em] text-cyan-300/90 font-medium">Institutional work</p>
+          <p className="text-sm uppercase tracking-[0.4em] text-cyan-300/90 font-medium">Applied transformation</p>
           <h3 className="mt-6 text-4xl font-bold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
-            Strategic partnerships and applied research in learning and capability systems.
+            Systems implementation, capability innovation and organisational transformation.
           </h3>
           <p className="mt-6 text-lg leading-8 text-slate-400 sm:text-xl">
-            Working with leadership teams, innovation groups and capability development organisations to design, implement and evaluate AI-enabled learning systems and organisational transformation initiatives.
+            Working with leadership teams, innovation groups and transformation programmes to design, implement and evaluate systems architecture and capability ecosystems across sectors.
           </p>
         </div>
 
